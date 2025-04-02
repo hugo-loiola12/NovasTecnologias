@@ -34,7 +34,7 @@ Um arquivo `main.py` contém o menu interativo que permite ao usuário navegar p
 A estrutura de diretórios e arquivos do projeto é a seguinte:
 
 ```
-sistema_loja/
+Trabalho/
 ├── main.py         # Arquivo principal com o menu interativo
 ├── produto.py      # Define a classe Produto
 ├── carrinho.py     # Define a classe Carrinho
