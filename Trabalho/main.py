@@ -9,6 +9,8 @@ def main():
     loja.adicionar_produto(Produto(1, "Camiseta", 50.0, 10))
     loja.adicionar_produto(Produto(2, "Calça", 80.0, 5))
     loja.adicionar_produto(Produto(3, "Tênis", 120.0, 3))
+    loja.adicionar_produto(Produto(4, "Jaqueta", 200.0, 2))
+    loja.adicionar_produto(Produto(5, "Boné", 30.0, 15))
 
     while True:
         print("\n=== Menu da Loja ===")
