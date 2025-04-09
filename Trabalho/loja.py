@@ -1,4 +1,6 @@
+# Loja.py
 
+from pagamento import Pagamento
 from carrinho import Carrinho
 
 
@@ -8,17 +10,14 @@ class Loja:
         self.carrinho = Carrinho()
 
     def adicionar_produto(self, produto):
-
         self.produtos.append(produto)
 
     def listar_produtos(self):
-
         print("Produtos disponíveis:")
         for produto in self.produtos:
             print(produto)
 
     def aplicar_desconto(self, id_produto, percentual):
-
         for produto in self.produtos:
             if produto.id == id_produto:
                 produto.aplicar_desconto(percentual)
@@ -28,7 +27,6 @@ class Loja:
         print("Produto não encontrado!")
 
     def adicionar_ao_carrinho(self, id_produto, quantidade):
-
         for produto in self.produtos:
             if produto.id == id_produto:
                 if self.carrinho.adicionar_produto(produto, quantidade):
@@ -37,22 +35,27 @@ class Loja:
         print("Produto não encontrado!")
 
     def finalizar_compra(self):
-
         total = self.carrinho.calcular_total()
         if total == 0:
-            print("Carrinho vazio. Adicione produtos antes de finalizar a compra.")
+            print("Carrinho vazio. Adicione produtos antes de finalizar a compra!")
             return
 
-        print(f"Total da compra: R${total:.2f}")
-        try:
-            valor_pago = float(input("Digite o valor pago: R$"))
-        except ValueError:
-            print("Valor inválido!")
-            return
+        print(f"\nTotal da compra: R${total:.2f}\n")
+        metodo = input(
+            "Escolha o método de pagamento (pix/cartao/boleto): ").strip().lower()
 
-        if valor_pago < total:
-            print("Pagamento insuficiente!")
+        sucesso = False
+        if metodo == "pix":
+            sucesso = Pagamento().pix(total)
+        elif metodo == "cartao":
+            sucesso = Pagamento().cartao(total)
+        elif metodo == "boleto":
+            sucesso = Pagamento().boleto(total)
         else:
-            troco = valor_pago - total
-            print(f"Pagamento realizado com sucesso! Troco: R${troco:.2f}")
+            print("Método de pagamento inválido!")
+
+        if sucesso:
+            print("\nCompra finalizada com sucesso! Obrigado pela preferência.")
             self.carrinho.esvaziar()
+        else:
+            print("\nFalha no processamento do pagamento. Tente novamente.")
