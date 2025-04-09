@@ -1,5 +1,3 @@
-# Loja.py
-
 from pagamento import Pagamento
 from carrinho import Carrinho
 

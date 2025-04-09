@@ -1,5 +1,3 @@
-# pagamento.py
-
 class Pagamento:
     JUROS_MENSAL = 0.02
 
@@ -14,7 +12,7 @@ class Pagamento:
 
     def cartao(self, amount: float) -> bool:
         print("=== Pagamento via Cartão ===")
-        tipo = int(input("Débito [1] ou Crédito? [2] "))
+        tipo = int(input("[1] Débito ou [2] Crédito? "))
         if tipo == 1:
             print(
                 f"Pagamento de R${amount:.2f} realizado com sucesso no débito!")

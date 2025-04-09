@@ -1,5 +1,3 @@
-
-
 from loja import Loja
 from produto import Produto
 

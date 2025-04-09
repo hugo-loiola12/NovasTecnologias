@@ -37,6 +37,7 @@ A estrutura de diretórios e arquivos do projeto é a seguinte:
 Trabalho/
 ├── main.py         # Arquivo principal com o menu interativo
 ├── produto.py      # Define a classe Produto
+├── pagamento.py    # Define a classe pagamento
 ├── carrinho.py     # Define a classe Carrinho
 └── loja.py         # Define a classe Loja, que integra Produto e Carrinho
 ```
@@ -74,6 +75,8 @@ Trabalho/
 
    ```bash
    python main.py
+   # ou
+   python3 main.py
    ```
 
    Isso iniciará o menu interativo no terminal.
@@ -81,42 +84,6 @@ Trabalho/
 ## Exemplo de Uso
 
 Ao executar o programa, o menu exibirá opções para visualizar produtos, adicionar produtos ao carrinho, aplicar descontos, visualizar o carrinho, finalizar a compra ou sair do sistema.
-
-## Projeto Base
-
-O projeto foi desenvolvido conforme o seguinte enunciado:
-
-> **Projeto: Sistema de Loja com POO**  
-> **Enunciado:**  
-> Você foi contratado para desenvolver o sistema de controle de uma loja virtual usando Programação Orientada a Objetos (POO) em Python.  
-> O sistema deverá permitir que o cliente:
->
-> - Visualize os produtos disponíveis na loja;
-> - Adicione produtos ao carrinho de compras;
-> - Aplique descontos em produtos específicos;
-> - Visualize os itens do carrinho;
-> - Finalize a compra com um pagamento simulado;
-> - Controle o estoque dos produtos;
-> - Navegue por um menu interativo no terminal.
->
-> **Requisitos obrigatórios:**
->
-> - O sistema deve ser dividido em múltiplas classes, representando:
->   - **Produto:** com nome, preço, e quantidade em estoque.
->   - **Carrinho:** responsável por armazenar os produtos adicionados, calcular o total e esvaziar o carrinho após o pagamento.
->   - **Loja:** responsável por gerenciar os produtos, a exibição e o processo de pagamento.
-> - Um arquivo `main.py` com o menu interativo que permita o usuário navegar pelas opções.
->
-> **Funcionalidades esperadas:**
->
-> - Exibir produtos com nome, preço e estoque.
-> - Adicionar produtos ao carrinho com verificação de estoque.
-> - Aplicar desconto em percentual ao preço de um produto.
-> - Calcular o total da compra com base nos produtos no carrinho.
-> - Simular o pagamento: o usuário digita o valor pago e o sistema informa se o pagamento foi suficiente, devolvendo o troco.
-> - Após o pagamento, o carrinho deve ser esvaziado.
-
-Esse README foi elaborado com base nos requisitos originais do projeto, garantindo uma implementação clara e organizada.
 
 ---
 
