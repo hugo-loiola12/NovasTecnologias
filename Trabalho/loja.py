@@ -1,7 +1,6 @@
 from pagamento import Pagamento
 from carrinho import Carrinho
 
-
 class Loja:
     def __init__(self):
         self.produtos = []

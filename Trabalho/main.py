@@ -1,7 +1,6 @@
 from loja import Loja
 from produto import Produto
 
-
 def main():
     loja = Loja()
     loja.adicionar_produto(Produto(1, "Camiseta", 50.0, 10))
