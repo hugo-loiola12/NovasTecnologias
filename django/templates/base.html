@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% blcok title%} tailwind {% endblock %}</title>
+    <title>{% block title%} tailwind {% endblock %}</title>
 </head>
 <body>
     {% block content %}
-        <h1> Hello World! </h1>
+        <h1 class="text-3xl"> Hello World! </h1>
     {% endblock %}
 </body>
 </html>
