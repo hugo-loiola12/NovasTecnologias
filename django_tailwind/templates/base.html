@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+    <title>{% block title %}Tailwind Project{% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}
+
+    <h1 class="text-2xl font-bold underline">Hello World!</h1>
+    <p class="font-mono">Olá mundo!</p>
+
+    {% endblock %}
+  </body>
+</html>
